@@ -39,6 +39,7 @@ body {
 .item-card:hover {
   background-image: linear-gradient(to right, blue , rgb(69, 194, 236));
   border: 1px solid rgb(69, 194, 236);
+  filter: brightness(1.15) saturate(1.30); 
 }
 
 .item-title {
@@ -51,8 +52,8 @@ body {
   opacity: 0.6;
 }
 
-.item-image {
-
+.item-image:hover {
+  
 }
 
 .search-bar-input {
