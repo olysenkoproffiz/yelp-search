@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const SearchResult = ({ searchResult }) => {
   return (
     <div className="search-result">
-      <div className="row d-flex justify-content-center">
+      <div className="row">
         {searchResult && searchResult.map(searchItem => {
           return (
             <ItemSummary item={searchItem} key={searchItem.id} />
