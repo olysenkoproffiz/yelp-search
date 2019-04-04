@@ -33,6 +33,7 @@
   /* margin: 0px auto; */
   font-size: 24px;
   font-weight: bolder;
+  text-align: left;
 }
 
 .item-image:hover {
