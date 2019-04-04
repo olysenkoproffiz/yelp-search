@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import { searchBusiness, setPropertyValue } from "../store/actions/searchActions";
 
 import SearchBar from "../components/SearchBar"
@@ -55,11 +57,15 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    searchBusiness: (searchParams) => dispatch(searchBusiness(searchParams)),
-    setPropertyValue: (payload) => { dispatch(setPropertyValue(payload)) },
-  }
+const mapDispatchToProps = {
+  searchBusiness: (searchParams) => searchBusiness(searchParams),
+  setPropertyValue: (payload) => setPropertyValue(payload),
+}
+
+SearchContainer.propTypes = {
+  search: PropTypes.object,
+  searchBusiness: PropTypes.func,
+  setPropertyValue: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchContainer);

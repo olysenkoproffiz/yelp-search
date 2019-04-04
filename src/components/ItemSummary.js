@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 const ItemSummary = ({ item }) => {
   return (
     <React.Fragment>
@@ -18,5 +20,9 @@ const ItemSummary = ({ item }) => {
 
 const imageStyle = { width: "400px", height: "400px" };
 const linkStyle = { color: "rgb(110, 226, 255)" };
+
+ItemSummary.propTypes = {
+  item: PropTypes.object
+};
 
 export default ItemSummary;

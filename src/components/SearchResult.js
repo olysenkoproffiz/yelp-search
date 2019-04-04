@@ -1,5 +1,6 @@
 import React from 'react';
-import ItemSummary from './ItemSummary'
+import ItemSummary from './ItemSummary';
+import PropTypes from 'prop-types';
 
 const SearchResult = ({ searchResult }) => {
   return (
@@ -15,5 +16,9 @@ const SearchResult = ({ searchResult }) => {
     </div>
   );
 }
+
+SearchResult.propTypes = {
+  SearchResult: PropTypes.array
+};
 
 export default SearchResult;
