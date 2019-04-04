@@ -15,9 +15,9 @@ export const searchBusiness = (searchParam) => {
       headers: {
         Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
       },
-      // params: {
-      //   location: locationSearch,
-      // }
+      params: {
+        limit: 50,
+      }
     })
       .then((response) => {
         console.log("response: ", response);
